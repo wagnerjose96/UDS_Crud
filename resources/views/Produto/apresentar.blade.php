@@ -2,6 +2,7 @@
 @section('conteudo')
     <br/>
     <h1 class="text-center">Descrição do produto</h1>
+    
     <form id="form-delete"style="display: none" action="{{ route('produtos.destroy',['produto' => $produto->id]) }}" method="post">
         {{csrf_field()}}
         {{method_field('DELETE')}}

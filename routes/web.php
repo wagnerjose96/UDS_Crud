@@ -23,3 +23,6 @@ Route::group([],function (){
 Route::group([],function (){
     Route::resource('pedidos', 'pedidoController');
 });
+
+
+

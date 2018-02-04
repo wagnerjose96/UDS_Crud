@@ -14,7 +14,7 @@
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <input type="hidden" name="_method" value="PUT">
 
-    <div class="form-group">
+    <div class="form-group mx-sm-3 mb-2">
         <label>Produto</label>
         <select class="form-control col-lg-4" name="produto_id" id="produto_id">
             <option value="0">Selecione o Produto</option>
@@ -24,27 +24,27 @@
         </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group mx-sm-3 mb-2">
         <label>Quantidade</label>
         <input class="form-control col-lg-2" id="quantidade" name="quantidade" type="number" value="1" onblur="valorTotal();">
     </div>
 
-    <div class="form-group">
+    <div class="form-group mx-sm-3 mb-2">
         <label>Preço unitário</label>
         <input class="form-control col-lg-2" id="preco" name="preco" value="" onblur="valorTotal();valorTotalDoPedido();dataHoje();">
     </div>
 
-    <div class="form-group">
+    <div class="form-group mx-sm-3 mb-2">
         <label>Total do produto</label>
         <input class="form-control col-lg-2" id="total_item" name="total_item">
     </div>
 
-    <div class="form-group">
+    <div class="form-group mx-sm-3 mb-2">
         <label>Total do pedido</label>
         <input class="form-control" id="total" name="total">
     </div>
 
-    <div class="form-group">
+    <div class="form-group mx-sm-3 mb-2">
         <input type="hidden" id="emissao" name="emissao" value="">
     </div>
     <button type="submit" class="btn btn-success">Salvar</button>

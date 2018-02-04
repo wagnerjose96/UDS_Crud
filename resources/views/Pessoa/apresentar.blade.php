@@ -1,23 +1,18 @@
 @extends('layouts.navbar')
 @section('conteudo')
 <br/>
-<h1>Detalhes do cadastro</h1>
+<h1 class="text-center">Detalhes do cadastro</h1>
 
-<div class="align-center"> 
-    <div class="card-deck">
-        <div class="col-sm-2 col-md-2">
-            <div class="card" style="width: 18rem;">
-            <img src="https://www.openbank.es/hazte-cliente/eaaf79b6ef4d62766e15bb2400c09103.svg" alt="..." class="img-responsive">
-            <h3 class="text-center">{{$pessoa->nome}}</h3>
-                <div class="card-body">
-                    <h5>CPF: {{$pessoa->cpf}}</h5>
-                    <h5>Data de nascimento: {{$pessoa->data_nascimento}}</h5>
-                </div>
-            </div>
+<dir class="col-md-4 col-md-offset-5">
+    <div class="card border-info mb-3" style="max-width: 18rem;">
+        <img src="https://www.openbank.es/hazte-cliente/eaaf79b6ef4d62766e15bb2400c09103.svg" alt="..." class="img-responsive">
+        <h3 class="text-center">{{$pessoa->nome}}</h3>
+        <div class="card-body">
+            <h5 class="text-center">CPF: {{$pessoa->cpf}}</h5>
+            <h5 class="text-center">Data de nascimento: {{$pessoa->data_nascimento}}</h5>
         </div>
-    </div> 
-</div>
-<table class="table"></table>
+    </div>
+    <br>
     <a class="btn btn-success" href="{{ route('pessoas.edit',['pessoa' => $pessoa->id]) }}">Editar cadastro</a>
     <a class="btn btn-danger" href="{{ route('pessoas.destroy',['pessoa' => $pessoa->id]) }}" onclick="event.preventDefault();if(confirm('Deseja excluir este item?')){document.getElementById('form-delete').submit();}">Excluir cadastro</a>
 
@@ -25,6 +20,8 @@
         {{csrf_field()}}
         {{method_field('DELETE')}}
     </form>
+</dir>
+
 @endsection
 
 
