@@ -30,7 +30,11 @@ class produtoController extends Controller
 
     public function show($id)
     {
-        $produto = Produto::findOrFail($id);
+        if(is_numeric($id)){
+            $produto = Produto::findOrFail($id);
+        }else {
+            $produto = Produto::where('nome', '=', $id)->firstOrFail();
+        }
         return view('Produto.apresentar', compact('produto'));
     }
 

@@ -36,7 +36,7 @@ $produtos = \App\Produto::all(); ?>
     </tr>
     <tr>
         <th scope="row">Data de emissão</th>
-        <td>{{$pedido->emissao}}</td>
+        <td><?php echo date('d/m/Y', strtotime($pedido->emissao)); ?></td>
     </tr>
     <tr>
         <th scope="row">Total do pedido</th>

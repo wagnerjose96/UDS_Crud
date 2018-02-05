@@ -107,4 +107,6 @@ class pedidoController extends Controller
         $pedidoId = $pedido instanceof Pedido ? $pedido->id : null;
         return $request->all();
     }
+
+    
 }

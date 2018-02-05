@@ -6,10 +6,11 @@
 <div class="col-md-4 col-md-offset-5">
     <div class="card border-info mb-3" style="max-width: 18rem;">
         <img src="https://www.openbank.es/hazte-cliente/eaaf79b6ef4d62766e15bb2400c09103.svg" alt="..." class="img-responsive">
-        <h3 class="text-center">{{$pessoa->nome}}</h3>
+        
         <div class="card-body">
-            <h5 class="text-center">CPF: {{$pessoa->cpf}}</h5>
-            <h5 class="text-center">Data de nascimento: {{$pessoa->data_nascimento}}</h5>
+            <h3 class="text-center">{{$pessoa->nome}}</h3>
+            <h5 class="text-center">{{ app(App\Http\Controllers\Controller::class)->mask($pessoa->cpf)}}</h5>
+            <h5 class="text-center">Data de nascimento: <?php echo date('d/m/Y', strtotime($pessoa->data_nascimento)); ?></h5>
         </div>
     </div>
     <br>

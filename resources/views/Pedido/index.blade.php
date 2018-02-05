@@ -19,7 +19,7 @@
         <tr>
             <td>{{ $pessoa->nome }}</td>
             <td>{{ $pedido->numero }}</td>
-            <td>{{ $pedido->emissao }}</td>
+            <td><?php echo date('d/m/Y', strtotime($pedido->emissao)); ?></td>
             <td>R${{ $pedido->total }},00</td>
             <td>
                 <a class="btn btn-primary btn-sm" href="{{route('pedidos.show', ['pedido' => $pedido->id])}}">Detalhes</a>
