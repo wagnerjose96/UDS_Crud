@@ -34,7 +34,7 @@
     - tabelas populadas.
 
 ## Utilizar o sistema
-* LApós ter configurado o banco de dados, abra um terminal e execute o comando:
+* Após ter configurado o banco de dados, abra um terminal e execute o comando:
     - "php artisan serve";
     - assim o laravel irá carregar a aplicação.
 
