@@ -6,7 +6,6 @@
     <table class="table table-bordered">
         <thead>
         <tr class="bg-primary">
-            <th>ID</th>
             <th>Nome</th>
             <th>CPF</th>
             <th>Data Nascimento</th>
@@ -16,7 +15,6 @@
         <tbody>
         @foreach($pessoas as $pessoa)
             <tr>
-                <td>{{ $pessoa->id }}</td>
                 <td>{{ $pessoa->nome }}</td>
                 <td>{{ $pessoa->cpf }}</td>
                 <td>{{ $pessoa->data_nascimento }}</td>
@@ -29,6 +27,6 @@
         </tbody>
     </table>
     <br/>
-    <a class="btn btn-success" href="{{route('pessoas.create')}}">Novo cliente</a>
+    <a class="btn btn-success btn-lg" href="{{route('pessoas.create')}}">Novo cliente</a>
     
 @endsection

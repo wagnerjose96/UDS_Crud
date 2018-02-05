@@ -23,6 +23,9 @@
         <a class="nav-link" href="{{ route('produtos.index') }}">Produtos <span class="sr-only">(current)</span></a>
       </li>
     </ul>
+
+    <!-- Busca pelo nome ainda não implementada -->
+    
     <form class="form-inline my-2 my-lg-0" action="{{ route('produtos.index') }}" >
     <input class="form-control mr-sm-2" type="search" placeholder="Buscar produto" aria-label="Search">
     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>

@@ -24,6 +24,6 @@
             <label>Preço</label>
             <input class="form-control" id="preco" name="preco">
         </div>
-        <button type="submit" class="btn btn-success">Salvar novo produto</button>
+        <button type="submit" class="btn btn-success btn-lg">Salvar novo produto</button>
     </form>
 @endsection

@@ -1,6 +1,8 @@
 @extends('layouts.navbar')
 @section('conteudo')
-<?php  use App\Produto;
+<?php  
+use App\ItemPedido;
+use App\Produto;
 $produtos = \App\Produto::all(); ?>
 <br/>
 <h1 class="text-center">Detalhes do Pedido</h1>
@@ -24,8 +26,12 @@ $produtos = \App\Produto::all(); ?>
         <th scope="row">Itens comprados</th>
         <td>
             @foreach($produtos as $produto)
-               -- {{$produto->nome}}
+                <?php 
+                    $itensPedidos = ItemPedido::findOrFail($pedido->id);
+                    $iten = Produto::findOrFail($itensPedidos->produto_id); 
+                ?>
             @endforeach
+            {{$iten->nome}}
         </td>
     </tr>
     <tr>
@@ -40,9 +46,9 @@ $produtos = \App\Produto::all(); ?>
     </tbody>
 </table>
 
-<a class="btn btn-success" href="{{ route('pedidos.edit',['pedido' => $pedido->id]) }}">Comprar novo item</a>
+<a class="btn btn-success btn-lg" href="{{ route('pedidos.edit',['pedido' => $pedido->id]) }}">Comprar novo item</a>
 
-<a class="btn btn-danger" href="{{ route('pedidos.destroy',['pedido' => $pedido->id]) }}"
+<a class="btn btn-danger btn-lg" href="{{ route('pedidos.destroy',['pedido' => $pedido->id]) }}"
    onclick="event.preventDefault();if(confirm('Deseja excluir este pedido?')){document.getElementById('form-delete').submit();}">Excluir Pedido</a>
    
 @endsection

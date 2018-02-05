@@ -11,10 +11,6 @@
     <table class="table table-bordered">
         <tbody>
         <tr>
-            <th scope="row">ID</th>
-            <td>{{$produto->id}}</td>
-        </tr>
-        <tr>
             <th scope="row">Codigo</th>
             <td>{{$produto->codigo}}</td>
         </tr>
@@ -24,11 +20,11 @@
         </tr>
         <tr>
             <th scope="row">Preço</th>
-            <td>{{$produto->preco}}</td>
+            <td>R${{$produto->preco}},00</td>
         </tr>
         </tbody>
     </table>
-    <a class="btn btn-success" href="{{ route('produtos.edit',['produto' => $produto->id]) }}">Editar</a>
-    <a class="btn btn-danger" href="{{ route('produtos.destroy',['produto' => $produto->id]) }}"
+    <a class="btn btn-success btn-lg" href="{{ route('produtos.edit',['produto' => $produto->id]) }}">Editar</a>
+    <a class="btn btn-danger btn-lg" href="{{ route('produtos.destroy',['produto' => $produto->id]) }}"
        onclick="event.preventDefault();if(confirm('Deseja excluir este item?')){document.getElementById('form-delete').submit();}">Excluir</a>
 @endsection

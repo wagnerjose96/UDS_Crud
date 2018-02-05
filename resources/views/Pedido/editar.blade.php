@@ -47,7 +47,7 @@
     <div class="form-group mx-sm-3 mb-2">
         <input type="hidden" id="emissao" name="emissao" value="">
     </div>
-    <button type="submit" class="btn btn-success">Salvar</button>
+    <button type="submit" class="btn btn-success btn-lg">Salvar</button>
 </form>
 <script type="text/javascript">
     function valorTotal() {

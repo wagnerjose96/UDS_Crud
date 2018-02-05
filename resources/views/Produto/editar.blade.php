@@ -25,6 +25,6 @@
             <label>Preço</label>
             <input class="form-control" id="preco" name="preco" type="text" value="{{$produto->preco}}">
         </div>
-        <button type="submit" class="btn btn-success">Salvar</button>
+        <button type="submit" class="btn btn-success btn-lg">Salvar</button>
     </form>
 @endsection

@@ -60,7 +60,7 @@
         </div>
         <br>
         <div class="form-group mx-sm-3 mb-2">
-            <button type="submit" class="btn btn-success">Salvar pedido</button>
+            <button type="submit" class="btn btn-success btn-lg">Salvar pedido</button>
         </div>
         
     </form>

@@ -24,6 +24,6 @@
             <label>Data Nascimento</label>
             <input class="form-control" id="data_nascimento" name="data_nascimento" type="date">
         </div>
-        <button type="submit" class="btn btn-success">Salvar</button>
+        <button type="submit" class="btn btn-success btn-lg">Salvar</button>
     </form>
 @endsection
