@@ -3,7 +3,7 @@
 * Com o curto tempo e pouco conhecimento sobre o framework, procurei utilizar um código limpo, além de uma escrita de fácil compreensão.
 
 ## Observações
-* Com todos os requisitos requeridos pelo teste, ainda no foram implementados alguns detalhes, como uma "Mask" para a exibição dos dados "Preços" e "datas", o Uuid não foi implementado nas entidades, pela falta de conhecimento do mesmo no framework.
+* Com todos os requisitos requeridos pelo teste, ainda não foram implementados alguns detalhes, como uma "Mask" para a exibição dos dados "Preços" e "datas", o Uuid não foi implementado nas entidades, pela falta de conhecimento do mesmo no framework.
 
 ## Banco de Dados
 * Configuração do mysql:
