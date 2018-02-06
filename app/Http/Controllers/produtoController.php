@@ -30,20 +30,11 @@ class produtoController extends Controller
 
     public function show($id)
     {
-        if(is_numeric($id)){
-            $produto = Produto::findOrFail($id);
-        }else {
-            $produto = Produto::where('nome', '=', $id)->firstOrFail();
-        }
+        $produto = Produto::findOrFail($id);
         return view('Produto.apresentar', compact('produto'));
     }
 
-    public function buscar($buscar)
-    {
-        $produto = Produto::findOrFail($buscar);
-        return view('Produto.apresentar', compact('produto'));
-    }
-
+    
     public function edit($id)
     {
         $produto = Produto::findOrFail($id);
@@ -56,9 +47,10 @@ class produtoController extends Controller
         $data['defaulter'] = $request->has('defaulter');
         $produto->fill($data);
         $produto->save();
-        return redirect()->route('produtos.index');
+        return redirect()->route('Produto.index');
     }
 
+    
     public function destroy($id)
     {
         $produto = Produto::findOrFail($id);
